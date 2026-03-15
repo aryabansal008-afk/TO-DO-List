@@ -1,0 +1,182 @@
+body{
+    height:100vh;
+    background: url("https://cdn.vectorstock.com/i/500p/59/12/dotted-grid-pattern-vector-21245912.jpg");
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding-top:250px;
+    overflow-y:auto;
+}
+
+h1{
+    position:absolute;
+    top:20px;
+    font-size:100px;
+    font-family:'Imbue';
+    color:#0f2b59; 
+}
+
+#add-task-container{
+    width:520px;
+    background-color:rgb(255, 183, 0);
+    padding:40px 30px;
+    border-radius:16px;
+    box-shadow: 2px 3px;
+    margin-bottom:20px;
+    display:flex;
+}
+
+#input-task{
+    flex:70%;
+    margin-right:10px;
+    border-radius:6px;
+    font-size:20px;
+    padding:20px;
+}
+
+#add-task{
+    flex:1;
+    transition:0.3s;
+    padding:10px;
+    background-color:white;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:25px;
+    color:green;
+}
+
+#add-task:hover{
+    background-color:rgb(165, 215, 165);
+    color:white;
+}
+
+.task{
+    width:510px;
+    display:flex;
+    justify-content:space-between;
+    background-color:rgba(253, 220, 136, 0.8);
+    border-radius:16px;
+    box-shadow:inset 2px 1px 2px 1px rgba(0,0,0,0.2);
+    padding:10px; 
+    margin-left:5px;     
+}
+
+.task li{
+    list-style: none;
+    flex: 1;
+    padding:10px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:16px;
+}
+
+.task button{
+    padding:10px;
+    flex:0.5;
+    border-radius:6px;
+    border: 1px solid transparent;
+    cursor:pointer;
+}
+
+.task .checkTask{
+    color:azure;
+    margin-right:10px;
+    background-color:rgb(141, 202, 251);
+    box-shadow: 1px 1px 1px 1px rgba(141, 202, 251, 0.5);
+    font-size:16px;
+    transition:0.3s;
+}
+
+.task .checkTask:hover{
+    color:rgb(141, 202, 251);
+    border: 1px solid rgb(141, 202, 251);
+    background-color:azure;
+}
+
+.task .deleteTask{
+    color:azure;
+    margin-right:10px;
+    background-color:rgb(255, 125, 125);
+    box-shadow: 1px 1px 1px 1px rgba(141, 202, 251, 0.5);
+    font-size:16px;
+    transition:0.3s;
+}
+
+.task .deleteTask:hover{
+    color:rgb(255, 125, 125);;
+    border: 1px solid rgb(255, 125, 125);
+    background-color:azure;
+}
+
+.menuBtn{
+    color:#0f2b59;
+    padding:10px;
+    font-size:30px;
+    position:fixed;
+    top:20px;
+    right:30px;
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+
+.menuBtn:hover{
+    background: rgb(217, 215, 215);
+    border: 1px solid rgb(217, 215, 215);
+    border-radius:50%;
+}
+
+#sidebar{
+    position:fixed;
+    top:0;
+    height:100vh;
+    width:260px;
+    right:-260px;
+    background-color:rgb(150, 150, 150);
+    color:#0f2b59;
+    padding:30px 20px;
+    transition:right 0.4s ease;
+    box-sizing:border-box;
+    box-shadow: -5px 0px 20px rgba(0,0,0,0.5);
+}
+
+#sidebar.active{
+    right:0;
+}
+
+#sidebar h2{
+    margin-bottom: 50px;
+    font-size:32px;
+}
+
+#sidebar li{
+    border-bottom: 1px solid rgb(255, 255, 255);
+    cursor:pointer;
+    list-style:none;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+#sidebar li:hover{
+    color:dimgray;
+}
+
+#overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:82%;
+    background:rgba(0,0,0,0.2);
+    opacity:0;
+    pointer-events:none;
+    transition:0.2s ease;
+}
+
+#overlay.active{
+    opacity:1;
+}
+
+.completed li{
+    text-decoration:line-through;
+    color:gray;
+}
